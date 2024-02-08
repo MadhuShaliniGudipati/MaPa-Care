@@ -30,7 +30,7 @@ public class CareGiver {
 	@Column(nullable=false,length=50)
 	private int no_of_consultants;
 	@Column(nullable=true)
-	private int care_recep_id;
+	private Integer care_recep_id;
 	public int getCare_giver_id() {
 		return care_giver_id;
 	}
@@ -82,8 +82,13 @@ public class CareGiver {
 	public int getCare_recep_id() {
 		return care_recep_id;
 	}
-	public void setCare_recep_id(int care_recep_id) {
-		this.care_recep_id = care_recep_id;
+	public void setCare_giver_id(Integer care_recep_id) {
+		if(care_recep_id==null) {
+			this.care_recep_id=-1;
+		}
+		else {
+			this.care_recep_id=care_recep_id;
+		}
 	}
 
 }
