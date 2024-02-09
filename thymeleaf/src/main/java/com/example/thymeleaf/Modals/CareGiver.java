@@ -17,6 +17,9 @@ public class CareGiver {
 	
 	@Column(nullable=false,length=50)
 	private String email_id;
+	@Column(nullable=false, length=50)
+	private String password;
+	
 	@Column(nullable=false,length=50)
 	private String first_name;
 	@Column(nullable=false,length=50)
@@ -89,6 +92,12 @@ public class CareGiver {
 		else {
 			this.care_recep_id=care_recep_id;
 		}
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }
